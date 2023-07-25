@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(images/JW.jpeg);
+    background-size: cover;
+   
+}
+.movie-container{
+    width: 80%;
+    height: auto;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    background: none;
+    backdrop-filter: blur(20px);
+    position: relative;
+    box-shadow: 0 50px 55px -10px #000;
+}
+img{
+    float: right;
+    height:75vh;
+}
+.Title{
+    position: absolute;
+    color: #fff;
+    padding: 50px 150px;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+}
+h3{
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 54px;
+    top: 150px;
+    left: 50px;
+    
+}
+.dis {
+    position: absolute;
+    top: 180px;
+    padding: 80px 30px;
+    color: #f1f1f1;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+button{
+   
+    top: 80%;
+    left: 18%;
+    background: none;
+    letter-spacing: 5px;
+    
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 1em 2.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+button:hover{
+    color: #000;
+    background: #f3f3f3;
+
+}
+
+button::after, button::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+
+   button::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   button:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   button:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   button:hover {
+    color: var(--color2);
+   }
+   
+   button:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
